@@ -46,7 +46,7 @@ function onPressN(){
 
 
 //on key c
-function onPressC(){
+function onPressSmallc(){
     console.log(urlArr.length);
     urlArr.splice(index,1);
     console.log(urlArr.length);
@@ -57,6 +57,11 @@ if(index==0){
     index=index-1;
     image.src=urlArr[index];
 }
+}
+
+function onPressCapitalC(){
+    image.src="";
+    urlArr=[];
 }
 
 
@@ -80,7 +85,10 @@ document.addEventListener('keypress',(event)=>{
        onPressN();
     }
     else if(event.key=='c'){
-        onPressC();
+        onPressSmallc();
+    }
+    else if(event.key=='C'){
+        onPressCapitalC();
     }
 
 });
